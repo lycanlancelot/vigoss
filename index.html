@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vigoss – Cloud GPU Rental for AI, ML & Deep Learning</title>
+  <meta name="description" content="Vigoss delivers on-demand cloud GPU computing at unbeatable prices. Rent H100, A100, RTX 4090 and more – pay by the hour, no commitment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner container">
+      <a href="#" class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">vigoss</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#gpus">GPUs</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#pricing" class="nav-cta">Get Started</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+    <div class="container hero-content">
+      <div class="badge">🇦🇺 Australia's Most Affordable GPU Cloud</div>
+      <h1 class="hero-title">
+        Supercharge Your AI With<br />
+        <span class="gradient-text">On-Demand GPU Power</span>
+      </h1>
+      <p class="hero-subtitle">
+        Rent world-class NVIDIA GPUs by the hour. No contracts, no minimums.<br />
+        Deploy in under 60 seconds — built for AI, ML, and deep learning.
+      </p>
+      <div class="hero-actions">
+        <a href="#gpus" class="btn btn-primary">Browse GPUs</a>
+        <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">60<span class="stat-unit">s</span></span>
+          <span class="stat-label">Deploy Time</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">99.9<span class="stat-unit">%</span></span>
+          <span class="stat-label">Uptime SLA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">80<span class="stat-unit">%</span></span>
+          <span class="stat-label">Cost Savings</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">24<span class="stat-unit">/7</span></span>
+          <span class="stat-label">Support</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GPU CARDS ═══════════════════ -->
+  <section class="section gpu-section" id="gpus">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GPU Catalogue</span>
+        <h2 class="section-title">Pick Your Perfect GPU</h2>
+        <p class="section-desc">All prices in AUD per hour. Billed per second — only pay for what you use.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs" role="tablist">
+        <button class="tab active" data-filter="all">All GPUs</button>
+        <button class="tab" data-filter="consumer">Consumer</button>
+        <button class="tab" data-filter="professional">Professional</button>
+        <button class="tab" data-filter="datacenter">Data Centre</button>
+      </div>
+
+      <div class="gpu-grid" id="gpu-grid">
+
+        <!-- RTX 4090 -->
+        <div class="gpu-card" data-category="consumer" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-badge popular">Most Popular</div>
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#6366f1"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#6366f1" opacity=".6"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#6366f1" opacity=".4"/><path d="M4 28h40" stroke="#6366f1" stroke-width=".5" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3 class="gpu-name">RTX 4090</h3>
+            <p class="gpu-tagline">Best for generative AI & inference</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">24 GB GDDR6X</span></div>
+            <div class="spec"><span class="spec-label">CUDA Cores</span><span class="spec-value">16,384</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">1,008 GB/s</span></div>
+            <div class="spec"><span class="spec-label">TDP</span><span class="spec-value">450 W</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>0.95<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $0.62<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-card">Deploy Now</a>
+        </div>
+
+        <!-- RTX 3090 -->
+        <div class="gpu-card" data-category="consumer" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-badge budget">Best Value</div>
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#22d3ee"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#22d3ee" opacity=".6"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#22d3ee" opacity=".4"/><path d="M4 28h40" stroke="#22d3ee" stroke-width=".5" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3 class="gpu-name">RTX 3090</h3>
+            <p class="gpu-tagline">Great for fine-tuning & training</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">24 GB GDDR6X</span></div>
+            <div class="spec"><span class="spec-label">CUDA Cores</span><span class="spec-value">10,496</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">936 GB/s</span></div>
+            <div class="spec"><span class="spec-label">TDP</span><span class="spec-value">350 W</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>0.47<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $0.30<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-card">Deploy Now</a>
+        </div>
+
+        <!-- RTX A6000 -->
+        <div class="gpu-card" data-category="professional" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#f59e0b"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#f59e0b" opacity=".6"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#f59e0b" opacity=".4"/><path d="M4 28h40" stroke="#f59e0b" stroke-width=".5" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3 class="gpu-name">RTX A6000</h3>
+            <p class="gpu-tagline">Professional workstation grade</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">48 GB GDDR6</span></div>
+            <div class="spec"><span class="spec-label">CUDA Cores</span><span class="spec-value">10,752</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">768 GB/s</span></div>
+            <div class="spec"><span class="spec-label">TDP</span><span class="spec-value">300 W</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>1.15<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $0.75<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-card">Deploy Now</a>
+        </div>
+
+        <!-- A100 40GB -->
+        <div class="gpu-card" data-category="datacenter" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#a855f7"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#a855f7" opacity=".6"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#a855f7" opacity=".4"/><path d="M4 28h40" stroke="#a855f7" stroke-width=".5" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3 class="gpu-name">A100 40GB</h3>
+            <p class="gpu-tagline">Data centre AI training</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">40 GB HBM2e</span></div>
+            <div class="spec"><span class="spec-label">Tensor TFLOPS</span><span class="spec-value">312</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">1,555 GB/s</span></div>
+            <div class="spec"><span class="spec-label">NVLink</span><span class="spec-value">600 GB/s</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>1.99<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $1.29<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-card">Deploy Now</a>
+        </div>
+
+        <!-- A100 80GB -->
+        <div class="gpu-card featured" data-category="datacenter" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-badge featured-badge">Featured</div>
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#6366f1" stroke-width="2"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#6366f1"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#6366f1" opacity=".7"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#6366f1" opacity=".5"/><path d="M4 28h40" stroke="#6366f1" stroke-width=".5" stroke-dasharray="2 2"/><circle cx="24" cy="38" r="3" fill="#6366f1"/></svg>
+            </div>
+            <h3 class="gpu-name">A100 80GB SXM4</h3>
+            <p class="gpu-tagline">Large model training & LLMs</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">80 GB HBM2e</span></div>
+            <div class="spec"><span class="spec-label">Tensor TFLOPS</span><span class="spec-value">312</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">2,000 GB/s</span></div>
+            <div class="spec"><span class="spec-label">NVLink</span><span class="spec-value">600 GB/s</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>2.55<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $1.65<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">Deploy Now</a>
+        </div>
+
+        <!-- H100 PCIe -->
+        <div class="gpu-card" data-category="datacenter" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#10b981"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#10b981" opacity=".6"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#10b981" opacity=".4"/><path d="M4 28h40" stroke="#10b981" stroke-width=".5" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3 class="gpu-name">H100 PCIe 80GB</h3>
+            <p class="gpu-tagline">Next-gen transformer training</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">80 GB HBM3</span></div>
+            <div class="spec"><span class="spec-label">FP8 TFLOPS</span><span class="spec-value">3,958</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">3,350 GB/s</span></div>
+            <div class="spec"><span class="spec-label">NVLink</span><span class="spec-value">900 GB/s</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>3.19<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $2.09<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-card">Deploy Now</a>
+        </div>
+
+        <!-- H100 SXM5 -->
+        <div class="gpu-card" data-category="datacenter" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-badge new">New</div>
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#f43f5e"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#f43f5e" opacity=".6"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#f43f5e" opacity=".4"/><path d="M4 28h40" stroke="#f43f5e" stroke-width=".5" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3 class="gpu-name">H100 SXM5 80GB</h3>
+            <p class="gpu-tagline">Maximum throughput for frontier AI</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">80 GB HBM3</span></div>
+            <div class="spec"><span class="spec-label">FP8 TFLOPS</span><span class="spec-value">3,958</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">3,350 GB/s</span></div>
+            <div class="spec"><span class="spec-label">NVLink BW</span><span class="spec-value">900 GB/s</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>3.83<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $2.49<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-card">Deploy Now</a>
+        </div>
+
+        <!-- L40S -->
+        <div class="gpu-card" data-category="professional" data-reveal>
+          <div class="gpu-card-header">
+            <div class="gpu-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="12" width="40" height="24" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/><rect x="10" y="18" width="8" height="8" rx="2" fill="#f59e0b"/><rect x="22" y="18" width="8" height="8" rx="2" fill="#f59e0b" opacity=".6"/><rect x="34" y="18" width="6" height="4" rx="1" fill="#f59e0b" opacity=".4"/></svg>
+            </div>
+            <h3 class="gpu-name">L40S 48GB</h3>
+            <p class="gpu-tagline">Inference & video AI workloads</p>
+          </div>
+          <div class="gpu-specs">
+            <div class="spec"><span class="spec-label">VRAM</span><span class="spec-value">48 GB GDDR6</span></div>
+            <div class="spec"><span class="spec-label">FP8 TFLOPS</span><span class="spec-value">733</span></div>
+            <div class="spec"><span class="spec-label">Memory BW</span><span class="spec-value">864 GB/s</span></div>
+            <div class="spec"><span class="spec-label">TDP</span><span class="spec-value">350 W</span></div>
+          </div>
+          <div class="gpu-price-block">
+            <div class="price-row">
+              <span class="price-label">On-Demand</span>
+              <span class="price"><span class="price-currency">AUD $</span>1.55<span class="price-unit">/hr</span></span>
+            </div>
+            <div class="price-row secondary">
+              <span class="price-label">Spot</span>
+              <span class="price spot">AUD $0.99<span class="price-unit">/hr</span></span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-card">Deploy Now</a>
+        </div>
+
+      </div><!-- /gpu-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════ COST CALCULATOR ═══════════════════ -->
+  <section class="section calculator-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Calculator</span>
+        <h2 class="section-title">Estimate Your Cost</h2>
+        <p class="section-desc">See exactly how much your workload will cost before you deploy.</p>
+      </div>
+      <div class="calculator-card">
+        <div class="calc-controls">
+          <div class="calc-group">
+            <label for="calc-gpu">GPU Model</label>
+            <select id="calc-gpu">
+              <option value="0.95">RTX 4090 – $0.95/hr</option>
+              <option value="0.47">RTX 3090 – $0.47/hr</option>
+              <option value="1.15">RTX A6000 – $1.15/hr</option>
+              <option value="1.99">A100 40GB – $1.99/hr</option>
+              <option value="2.55" selected>A100 80GB SXM4 – $2.55/hr</option>
+              <option value="3.19">H100 PCIe 80GB – $3.19/hr</option>
+              <option value="3.83">H100 SXM5 80GB – $3.83/hr</option>
+              <option value="1.55">L40S 48GB – $1.55/hr</option>
+            </select>
+          </div>
+          <div class="calc-group">
+            <label for="calc-count">Number of GPUs</label>
+            <div class="input-stepper">
+              <button class="step-btn" id="step-down">−</button>
+              <input type="number" id="calc-count" value="1" min="1" max="128" />
+              <button class="step-btn" id="step-up">+</button>
+            </div>
+          </div>
+          <div class="calc-group">
+            <label for="calc-hours">Hours per Month</label>
+            <input type="range" id="calc-hours" min="1" max="744" value="100" />
+            <div class="range-labels">
+              <span id="hours-display">100 hrs</span>
+              <span class="range-max">744 hrs (full month)</span>
+            </div>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="result-breakdown">
+            <div class="breakdown-row">
+              <span>Per GPU / hour</span>
+              <span id="res-per-gpu">AUD $2.55</span>
+            </div>
+            <div class="breakdown-row">
+              <span>GPU count</span>
+              <span id="res-count">× 1</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Hours / month</span>
+              <span id="res-hours">× 100 hrs</span>
+            </div>
+            <div class="breakdown-divider"></div>
+            <div class="breakdown-row total">
+              <span>Estimated Monthly Cost</span>
+              <span id="res-total">AUD $255.00</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary calc-deploy-btn">Deploy This Config</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FEATURES ═══════════════════ -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Vigoss</span>
+        <h2 class="section-title">Everything You Need to Scale</h2>
+        <p class="section-desc">Enterprise-grade infrastructure made simple and affordable.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>60-Second Deploy</h3>
+          <p>Pre-configured Docker environments with CUDA, PyTorch, TensorFlow, and popular ML frameworks ready to go.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Custom Environments</h3>
+          <p>Bring your own Docker image or use our curated templates for Stable Diffusion, LLaMA, Whisper, and more.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Per-Second Billing</h3>
+          <p>No hourly minimums. Pay only for the exact seconds your GPU is active — no hidden fees, no surprises.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Enterprise Security</h3>
+          <p>Isolated compute environments, encrypted storage, SSH key auth, and VPC networking for peace of mind.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>NVLink Multi-GPU</h3>
+          <p>Scale to 8× H100s or A100s with full NVLink interconnects for distributed training at maximum throughput.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Real-Time Monitoring</h3>
+          <p>Live dashboards for GPU utilisation, memory, temperature, and network I/O. Set alerts and auto-stop rules.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Full API & CLI</h3>
+          <p>Automate everything with our REST API and Python SDK. Integrate GPU provisioning into your CI/CD pipelines.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Dedicated AU-based support team. Average response under 4 minutes. SLA-backed uptime guarantee.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
+  <section class="section how-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Workflow</span>
+        <h2 class="section-title">Deploy in 4 Simple Steps</h2>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal>
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Create an Account</h3>
+            <p>Sign up with your email in seconds. No credit card required to explore the platform.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-reveal>
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Choose Your GPU</h3>
+            <p>Select from our catalogue of NVIDIA GPUs. Filter by VRAM, compute power, or price.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-reveal>
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Configure & Deploy</h3>
+            <p>Pick a template or bring your Docker image. Set storage, networking, and environment variables.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" data-reveal>
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h3>SSH In & Run</h3>
+            <p>Connect via SSH or JupyterLab. Your GPU is live within 60 seconds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TECH LOGOS ═══════════════════ -->
+  <section class="logos-section">
+    <div class="container">
+      <p class="logos-label">Compatible with every major AI framework</p>
+      <div class="logos-track">
+        <div class="logos-slide">
+          <span class="fw-logo">PyTorch</span>
+          <span class="fw-logo">TensorFlow</span>
+          <span class="fw-logo">JAX</span>
+          <span class="fw-logo">Hugging Face</span>
+          <span class="fw-logo">LangChain</span>
+          <span class="fw-logo">Stable Diffusion</span>
+          <span class="fw-logo">LLaMA</span>
+          <span class="fw-logo">Whisper</span>
+          <span class="fw-logo">CUDA</span>
+          <span class="fw-logo">cuDNN</span>
+          <span class="fw-logo">Triton</span>
+          <span class="fw-logo">vLLM</span>
+        </div>
+        <!-- duplicate for seamless loop -->
+        <div class="logos-slide" aria-hidden="true">
+          <span class="fw-logo">PyTorch</span>
+          <span class="fw-logo">TensorFlow</span>
+          <span class="fw-logo">JAX</span>
+          <span class="fw-logo">Hugging Face</span>
+          <span class="fw-logo">LangChain</span>
+          <span class="fw-logo">Stable Diffusion</span>
+          <span class="fw-logo">LLaMA</span>
+          <span class="fw-logo">Whisper</span>
+          <span class="fw-logo">CUDA</span>
+          <span class="fw-logo">cuDNN</span>
+          <span class="fw-logo">Triton</span>
+          <span class="fw-logo">vLLM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">Trusted by AI Teams Across Australia</h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Vigoss cut our training costs by 40% compared to AWS. The H100s are blazing fast and provisioning is dead simple."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JL</div>
+            <div>
+              <strong>Jordan Lee</strong>
+              <span>ML Engineer · Melbourne</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Deployed our entire Stable Diffusion pipeline in under 10 minutes. The per-second billing is a game-changer for burst workloads."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SC</div>
+            <div>
+              <strong>Sarah Chen</strong>
+              <span>AI Researcher · Sydney</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-reveal>
+          <div class="stars">★★★★★</div>
+          <p>"Finally, a cloud GPU provider that actually understands Australian latency requirements. Support is incredible."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <strong>Marcus Riley</strong>
+              <span>CTO · Brisbane startup</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FAQ ═══════════════════ -->
+  <section class="section faq-section" id="faq">
+    <div class="container faq-container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Common Questions</h2>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>How does billing work?</summary>
+          <p>You are billed per second of GPU uptime. Your wallet is charged at the end of each session. We accept credit card, PayPal, and bank transfer. There are no setup fees or minimum charges.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I bring my own Docker image?</summary>
+          <p>Yes — any public Docker Hub image or private registry image works. We also provide curated images for PyTorch, TensorFlow, Stable Diffusion, and more so you can start immediately.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where are your data centres?</summary>
+          <p>Our primary data centres are located in Sydney and Melbourne (AU), with nodes in Singapore for Asia-Pacific reach. All data remains within Australian borders by default.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is Spot pricing?</summary>
+          <p>Spot instances use spare capacity at a steep discount (up to 65% off on-demand). They may be interrupted with 30 seconds notice, making them ideal for fault-tolerant training jobs.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you offer reserved / committed pricing?</summary>
+          <p>Yes. Reserve GPUs for 1 month, 3 months, or 1 year and save up to 50% vs on-demand rates. Contact our team for a custom quote.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is there persistent storage?</summary>
+          <p>Yes. Network volumes are available from 20 GB to 50 TB at AUD $0.07/GB/month. Volumes persist across pod restarts and can be shared between instances.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <h2>Start training in under 60 seconds</h2>
+      <p>No contracts. No minimums. AUD $25 free credits on signup.</p>
+      <a href="#" class="btn btn-primary btn-lg">Create Free Account</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">vigoss</span>
+        </a>
+        <p>On-demand cloud GPU computing for AI, ML & deep learning. Australia's most affordable GPU cloud.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Discord">Discord</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">GPU Cloud</a></li>
+          <li><a href="#">Spot Instances</a></li>
+          <li><a href="#">Serverless AI</a></li>
+          <li><a href="#">Network Storage</a></li>
+          <li><a href="#">Templates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Python SDK</a></li>
+          <li><a href="#">Status Page</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2025 Vigoss Pty Ltd · ABN 00 000 000 000 · Sydney, Australia</span>
+      <span>All prices in AUD and inclusive of GST</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
