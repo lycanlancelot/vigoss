@@ -1,7 +1,7 @@
 services:
   - type: web
     name: vigoss
-    runtime: static
+    env: static
     staticPublishPath: .
     headers:
       - path: /*
